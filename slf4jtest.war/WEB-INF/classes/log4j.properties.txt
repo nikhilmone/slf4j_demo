@@ -1,0 +1,22 @@
+
+log4j.rootLogger=INFO, MyApp
+
+#log4j.additivity.org.apache.catalina=false
+log4j.appender.CONSOLE=org.apache.log4j.ConsoleAppender
+log4j.appender.CONSOLE.layout=org.apache.log4j.PatternLayout
+log4j.appender.CONSOLE.layout.ConversionPattern=[%d{MM/dd HH:mm:ss.SSS}]<BW>[%p]%c{1}:%L - %m%n
+log4j.appender.CONSOLE.Threshold=INFO
+
+
+# My applocation  Log
+
+log4j.appender.MyApp=org.apache.log4j.RollingFileAppender
+#log4j.appender.filelog.File=D:\\JBoss\\jboss-eap-5.1\\jboss-as\\server\\default\\log\\ap.log
+log4j.appender.MyApp.File=/home/nmone/aptoday.log
+log4j.appender.logfile.Threshold=INFO
+log4j.appender.MyApp.MaxBackupIndex=100
+log4j.appender.MyApp.MaxFileSize=1Gb
+log4j.appender.MyApp.encoding=UTF8
+log4j.appender.MyApp.layout=org.apache.log4j.PatternLayout
+log4j.appender.MyApp.layout.ConversionPattern=%p %t %c - %m%n
+
